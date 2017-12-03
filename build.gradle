@@ -22,6 +22,12 @@ dependencies {
     compile group: 'org.scala-lang', name: 'scala-library', version: '2.11.11'
 }
 
+configurations.all {
+    resolutionStrategy {
+        force 'com.google.guava:guava:12.0.1'
+    }
+}
+
 compileScala.targetCompatibility = "1.8"
 compileScala.sourceCompatibility = "1.8"
 
