@@ -19,7 +19,7 @@ object HousePriceSolution {
 
     realEstate.groupBy("Location")
       .avg(PRICE_SQ_FT)
-      .orderBy("avg(Price SQ Ft)")
+      .orderBy(s"avg(${PRICE_SQ_FT})")
       .show()
   }
 }
